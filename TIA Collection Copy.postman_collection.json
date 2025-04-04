@@ -1,0 +1,1771 @@
+{
+	"info": {
+		"_postman_id": "5a03bd68-7412-45da-b24c-43b548a88a50",
+		"name": "TIA Collection Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41529465",
+		"_collection_link": "https://tia999-2284.postman.co/workspace/TIA-Workspace~cee6c489-16d8-42e1-8dd6-5e09320065bd/collection/29743869-5a03bd68-7412-45da-b24c-43b548a88a50?action=share&source=collection_link&creator=41529465"
+	},
+	"item": [
+		{
+			"name": "Access Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic S09aTktOdDdNTXJSSXFYUTU5WVQ0Zy4uOnRNRkJPcEdORUpRcHhrd3c0dldSbEEuLg=="
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"actionId\": \"LOGIN\",\r\n    \"facilityId\": \"01\",\r\n    \"userId\": \"CMS2\",\r\n    \"forceInd\": \"Y\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/login",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"actionId\": \"LOGOUT\",\r\n    \"facilityId\": \"01\",\r\n    \"userId\": \"CMS2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/logout",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Item",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"itemId\": \"135148000\",\r\n    \"facilityId\": \"01\",\r\n    \"userId\": \"CMS2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/info/item",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"info",
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Container Info",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"containerId\": \"00000000000007708255\",\r\n    \"facilityId\": \"01\",\r\n    \"userId\": \"CMS2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/info/container",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"info",
+						"container"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Container Info Copy",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"containerId\": \"00000000000007708255\",\r\n    \"facilityId\": \"01\",\r\n    \"userId\": \"CMS2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/info/container",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"info",
+						"container"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Stock",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"facilityId\": \"01\",\r\n    \"userId\": \"RSILVA\",\r\n    \"itemId\": \"255519000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/info/item",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"info",
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET TASK",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"actionId\": \"GET_TASK\",\r\n    \"facilityId\": \"01\",\r\n    \"userId\": \"CMS2\",\r\n    \"locationId\": \"RECSTAGE\",\r\n    \"activityGroup\": \"PICKING PTS-PTL\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/picking/task",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"picking",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BUILD_CONT",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"actionId\":\"BUILD_CONT\",\r\n    \"facilityId\":\"01\",\r\n    \"userId\":\"CMS2\",\r\n    \"genericContainerId\":\"genCont001\",\r\n    \"locationId\" : \"\",\r\n    \"containerId\":\"20252108\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/build/container",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"build",
+						"container"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BUILD_CONT_DONE",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"actionId\":\"BUILD_CONT_DONE\",\r\n    \"facilityId\":\"01\",\r\n    \"userId\":\"CMS2\",\r\n    \"genericContainerId\":\"genCont001\",\r\n    \"containerId\":\"RMD_20012025_002\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/build/container",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"build",
+						"container"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BUILD_CONT_EXIT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Have not received of 1/28\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/build/container",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"build",
+						"container"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TRANSPORT (Move Cont)",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"actionId\": \"TRANSPORT\",\r\n    \"facilityId\": \"01\",\r\n    \"userId\": \"RSILVA\",\r\n    \"containerId\": \"00000001000183429526\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/transport",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"transport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TRANSPORT_DONE (Move container)",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"actionId\" : \"TRANSPORT_DONE\",\r\n    \"facilityId\" : \"01\",\r\n    \"userId\" : \"RSILVA\",\r\n    \"containerId\" : \"00000001000183429526\",\r\n    \"fromLocationId\" : \"00000001000183429526\",\r\n    \"toLocationId\" : \"RECSTAGE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/transport",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"transport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TRANSPORT_EXIT (Move container) Copy",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"actionId\" : \"TRANSPORT_EXIT\",\r\n    \"facilityId\" : \"01\",\r\n    \"userId\" : \"RSILVA\",\r\n    \"containerId\" : \"VP_0010\",\r\n    \"fromLocationId\": \"RECSTAGE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/transport",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"transport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UNIT_PICK",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"actionId\": \"UNIT_PICK\",\r\n  \"facilityId\": \"01\",\r\n  \"userId\": \"CMS3\",\r\n  \"genericLabels\": [\r\n    \"VP_0032\",\r\n    \"VP_0033\",\r\n    \"VP_0034\",\r\n    \"VP_0035\"\r\n  ],\r\n  \"tasks\": [\r\n    \"88701670\",\r\n    \"88701671\",\r\n    \"88701673\",\r\n    \"88701672\"\r\n  ],\r\n  \"waveNbr\": 36\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/picking/unit",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"picking",
+						"unit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CASE_PICK_PTS",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"actionId\": \"UNIT_PICK\",\r\n  \"facilityId\": \"01\",\r\n  \"userId\": \"CMS3\",\r\n  \"genericLabels\": [\r\n    \"VP_0032\",\r\n    \"VP_0033\",\r\n    \"VP_0034\",\r\n    \"VP_0035\"\r\n  ],\r\n  \"tasks\": [\r\n    \"88701670\",\r\n    \"88701671\",\r\n    \"88701673\",\r\n    \"88701672\"\r\n  ],\r\n  \"waveNbr\": 36\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/picking/unit",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"picking",
+						"unit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CASE_PICK",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"actionId\": \"UNIT_PICK\",\r\n  \"facilityId\": \"01\",\r\n  \"userId\": \"CMS3\",\r\n  \"genericLabels\": [\r\n    \"VP_0032\",\r\n    \"VP_0033\",\r\n    \"VP_0034\",\r\n    \"VP_0035\"\r\n  ],\r\n  \"tasks\": [\r\n    \"88701670\",\r\n    \"88701671\",\r\n    \"88701673\",\r\n    \"88701672\"\r\n  ],\r\n  \"waveNbr\": 36\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/picking/unit",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"picking",
+						"unit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UNIT_PICK_DONE",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"actionId\": \"UNIT_PICK\",\r\n  \"facilityId\": \"01\",\r\n  \"userId\": \"CMS3\",\r\n  \"genericLabels\": [\r\n    \"VP_0032\",\r\n    \"VP_0033\",\r\n    \"VP_0034\",\r\n    \"VP_0035\"\r\n  ],\r\n  \"tasks\": [\r\n    \"88701670\",\r\n    \"88701671\",\r\n    \"88701673\",\r\n    \"88701672\"\r\n  ],\r\n  \"waveNbr\": 36\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/picking/unit",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"picking",
+						"unit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UNIT_PICK_TO_LOC",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"statusCode\": \"200\",\r\n    \"message\": \"UNIT_PICK hecho con exito\",\r\n    \"facilityId\": \"01\",\r\n    \"userId\": \"RSILVA\",\r\n    \"containerDest\": [\r\n        {\r\n            \"dest_id\": \"583\",\r\n            \"generic_label\": \"10904100\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/picking/unit",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"picking",
+						"unit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CASE_PICK_TO_LOC Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"statusCode\": \"200\",\r\n    \"message\": \"UNIT_PICK hecho con exito\",\r\n    \"facilityId\": \"01\",\r\n    \"userId\": \"RSILVA\",\r\n    \"containerDest\": [\r\n        {\r\n            \"dest_id\": \"583\",\r\n            \"generic_label\": \"10904100\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/picking/case",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"picking",
+						"case"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UNIT_PICK_TO_LOC_CONF",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"statusCode\": \"200\",\r\n    \"message\": \"UNIT_PICK hecho con exito\",\r\n    \"facilityId\": \"01\",\r\n    \"userId\": \"RSILVA\",\r\n    \"containerDest\": [\r\n        {\r\n            \"dest_id\": \"583\",\r\n            \"generic_label\": \"10904100\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/picking/unit",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"picking",
+						"unit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UNIT_PICK_EXIT",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"actionId\": \"UNIT_PICK_EXIT\",\r\n    \"facilityId\": \"01\",\r\n    \"userId\": \"CMS3\",\r\n    \"containerId\": \"\",\r\n    \"waveNbr\": 37,\r\n    \"distroNbr\": \"\",\r\n    \"destId\": \"\",\r\n    \"itemId\": \"\",\r\n    \"locationId\": \"\",\r\n    \"checkDigit\": \"\",\r\n    \"palletGroupId\": 13136111,\r\n    \"workDirectiveId\": \"133087223\",\r\n    \"taskId\": \"88701670\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/picking/unit",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"picking",
+						"unit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UNIT_PICK_EXIT Copy",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"actionId\": \"UNIT_PICK_EXIT\",\r\n    \"facilityId\": \"01\",\r\n    \"userId\": \"CMS3\",\r\n    \"containerId\": \"\",\r\n    \"waveNbr\": 37,\r\n    \"distroNbr\": \"\",\r\n    \"destId\": \"\",\r\n    \"itemId\": \"\",\r\n    \"locationId\": \"\",\r\n    \"checkDigit\": \"\",\r\n    \"palletGroupId\": 13136111,\r\n    \"workDirectiveId\": \"133087223\",\r\n    \"taskId\": \"88701670\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/picking/unit",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"picking",
+						"unit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UNIT_PICK_SKIP",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"actionId\": \"UNIT_PICK\",\r\n  \"facilityId\": \"01\",\r\n  \"userId\": \"CMS3\",\r\n  \"genericLabels\": [\r\n    \"VP_0032\",\r\n    \"VP_0033\",\r\n    \"VP_0034\",\r\n    \"VP_0035\"\r\n  ],\r\n  \"tasks\": [\r\n    \"88701670\",\r\n    \"88701671\",\r\n    \"88701673\",\r\n    \"88701672\"\r\n  ],\r\n  \"waveNbr\": 36\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/picking/unit",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"picking",
+						"unit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PTS_CLOSE_CONT",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"actionId\": \"UNIT_PICK\",\r\n  \"facilityId\": \"01\",\r\n  \"userId\": \"CMS3\",\r\n  \"genericLabels\": [\r\n    \"VP_0032\",\r\n    \"VP_0033\",\r\n    \"VP_0034\",\r\n    \"VP_0035\"\r\n  ],\r\n  \"tasks\": [\r\n    \"88701670\",\r\n    \"88701671\",\r\n    \"88701673\",\r\n    \"88701672\"\r\n  ],\r\n  \"waveNbr\": 36\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/picking/unit",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"picking",
+						"unit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UNIT_PTS",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"actionId\": \"UNIT_PICK\",\r\n  \"facilityId\": \"01\",\r\n  \"userId\": \"CMS3\",\r\n  \"genericLabels\": [\r\n    \"VP_0032\",\r\n    \"VP_0033\",\r\n    \"VP_0034\",\r\n    \"VP_0035\"\r\n  ],\r\n  \"tasks\": [\r\n    \"88701670\",\r\n    \"88701671\",\r\n    \"88701673\",\r\n    \"88701672\"\r\n  ],\r\n  \"waveNbr\": 36\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/picking/unit",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"picking",
+						"unit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BEAUTIFY",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"facilityId\": \"01\",\r\n    \"userId\": \"CMS3\",\r\n    \"nbrGenLabels\": \"4\",\r\n    \"waveNbr\": \"36\",\r\n    \"pickDirectives\": [\r\n        {\r\n            \"distro_nbr\": \"433793667\",\r\n            \"pick_from_container_id\": \"10025700\",\r\n            \"dest_id\": \"161\",\r\n            \"item_id\": \"404010000\",\r\n            \"location_id\": \"10025700\",\r\n            \"check_digit\": \"2567\",\r\n            \"case_pack_size\": 6,\r\n            \"pick_container_qty\": 1,\r\n            \"unit_qty\": 6,\r\n            \"pick_order\": 6,\r\n            \"pick_type\": \"U\",\r\n            \"pallet_group_id\": 13136111,\r\n            \"work_directive_id\": 133087223,\r\n            \"task_id\": \"88701670\",\r\n            \"zone\": \"CAJA\",\r\n            \"wave_nbr\": 36\r\n        },\r\n        {\r\n            \"distro_nbr\": \"433793667\",\r\n            \"pick_from_container_id\": \"10025700\",\r\n            \"dest_id\": \"583\",\r\n            \"item_id\": \"404010000\",\r\n            \"location_id\": \"10025700\",\r\n            \"check_digit\": \"2567\",\r\n            \"case_pack_size\": 6,\r\n            \"pick_container_qty\": 1,\r\n            \"unit_qty\": 6,\r\n            \"pick_order\": 7,\r\n            \"pick_type\": \"U\",\r\n            \"pallet_group_id\": 13136111,\r\n            \"work_directive_id\": 133087224,\r\n            \"task_id\": \"88701672\",\r\n            \"zone\": \"CAJA\",\r\n            \"wave_nbr\": 36\r\n        },\r\n        {\r\n            \"distro_nbr\": \"433793667\",\r\n            \"pick_from_container_id\": \"10025700\",\r\n            \"dest_id\": \"111\",\r\n            \"item_id\": \"404010000\",\r\n            \"location_id\": \"10025700\",\r\n            \"check_digit\": \"2567\",\r\n            \"case_pack_size\": 6,\r\n            \"pick_container_qty\": 1,\r\n            \"unit_qty\": 6,\r\n            \"pick_order\": 8,\r\n            \"pick_type\": \"U\",\r\n            \"pallet_group_id\": 13136111,\r\n            \"work_directive_id\": 133087222,\r\n            \"task_id\": \"88701673\",\r\n            \"zone\": \"CAJA\",\r\n            \"wave_nbr\": 36\r\n        },\r\n        {\r\n            \"distro_nbr\": \"433793667\",\r\n            \"pick_from_container_id\": \"10033700\",\r\n            \"dest_id\": \"504\",\r\n            \"item_id\": \"404007000\",\r\n            \"location_id\": \"10033700\",\r\n            \"check_digit\": \"8652\",\r\n            \"case_pack_size\": 1,\r\n            \"pick_container_qty\": 1,\r\n            \"unit_qty\": 1,\r\n            \"pick_order\": 9,\r\n            \"pick_type\": \"U\",\r\n            \"pallet_group_id\": 13136111,\r\n            \"work_directive_id\": 133087229,\r\n            \"task_id\": \"88701671\",\r\n            \"zone\": \"CAJA\",\r\n            \"wave_nbr\": 36\r\n        },\r\n        {\r\n            \"distro_nbr\": \"433793667\",\r\n            \"pick_from_container_id\": \"10033700\",\r\n            \"dest_id\": \"583\",\r\n            \"item_id\": \"404007000\",\r\n            \"location_id\": \"10033700\",\r\n            \"check_digit\": \"8652\",\r\n            \"case_pack_size\": 1,\r\n            \"pick_container_qty\": 1,\r\n            \"unit_qty\": 1,\r\n            \"pick_order\": 10,\r\n            \"pick_type\": \"U\",\r\n            \"pallet_group_id\": 13136111,\r\n            \"work_directive_id\": 133087228,\r\n            \"task_id\": \"88701672\",\r\n            \"zone\": \"CAJA\",\r\n            \"wave_nbr\": 36\r\n        },\r\n        {\r\n            \"distro_nbr\": \"433793667\",\r\n            \"pick_from_container_id\": \"10033700\",\r\n            \"dest_id\": \"111\",\r\n            \"item_id\": \"404007000\",\r\n            \"location_id\": \"10033700\",\r\n            \"check_digit\": \"8652\",\r\n            \"case_pack_size\": 1,\r\n            \"pick_container_qty\": 1,\r\n            \"unit_qty\": 1,\r\n            \"pick_order\": 11,\r\n            \"pick_type\": \"U\",\r\n            \"pallet_group_id\": 13136111,\r\n            \"work_directive_id\": 133087226,\r\n            \"task_id\": \"88701673\",\r\n            \"zone\": \"CAJA\",\r\n            \"wave_nbr\": 36\r\n        },\r\n        {\r\n            \"distro_nbr\": \"433793667\",\r\n            \"pick_from_container_id\": \"10033700\",\r\n            \"dest_id\": \"161\",\r\n            \"item_id\": \"404007000\",\r\n            \"location_id\": \"10033700\",\r\n            \"check_digit\": \"8652\",\r\n            \"case_pack_size\": 1,\r\n            \"pick_container_qty\": 1,\r\n            \"unit_qty\": 1,\r\n            \"pick_order\": 12,\r\n            \"pick_type\": \"U\",\r\n            \"pallet_group_id\": 13136111,\r\n            \"work_directive_id\": 133087227,\r\n            \"task_id\": \"88701670\",\r\n            \"zone\": \"CAJA\",\r\n            \"wave_nbr\": 36\r\n        }\r\n    ],\r\n    \"statusCode\": \"200\",\r\n    \"message\": \"GET_TASK hecho con exito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/picking/unit",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"picking",
+						"unit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BEAUTIFY Copy",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "tMFBOpGNEJQpxkww4vWRlA..",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "KOZNKNt7MMrRIqXQ59YT4g..",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://alecd002.tia.com.ec:9004/ords/wms/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"facilityId\": \"01\",\r\n    \"userId\": \"CMS3\",\r\n    \"nbrGenLabels\": \"4\",\r\n    \"waveNbr\": \"36\",\r\n    \"pickDirectives\": [\r\n        {\r\n            \"distro_nbr\": \"433793667\",\r\n            \"pick_from_container_id\": \"10025700\",\r\n            \"dest_id\": \"161\",\r\n            \"item_id\": \"404010000\",\r\n            \"location_id\": \"10025700\",\r\n            \"check_digit\": \"2567\",\r\n            \"case_pack_size\": 6,\r\n            \"pick_container_qty\": 1,\r\n            \"unit_qty\": 6,\r\n            \"pick_order\": 6,\r\n            \"pick_type\": \"U\",\r\n            \"pallet_group_id\": 13136111,\r\n            \"work_directive_id\": 133087223,\r\n            \"task_id\": \"88701670\",\r\n            \"zone\": \"CAJA\",\r\n            \"wave_nbr\": 36\r\n        },\r\n        {\r\n            \"distro_nbr\": \"433793667\",\r\n            \"pick_from_container_id\": \"10025700\",\r\n            \"dest_id\": \"583\",\r\n            \"item_id\": \"404010000\",\r\n            \"location_id\": \"10025700\",\r\n            \"check_digit\": \"2567\",\r\n            \"case_pack_size\": 6,\r\n            \"pick_container_qty\": 1,\r\n            \"unit_qty\": 6,\r\n            \"pick_order\": 7,\r\n            \"pick_type\": \"U\",\r\n            \"pallet_group_id\": 13136111,\r\n            \"work_directive_id\": 133087224,\r\n            \"task_id\": \"88701672\",\r\n            \"zone\": \"CAJA\",\r\n            \"wave_nbr\": 36\r\n        },\r\n        {\r\n            \"distro_nbr\": \"433793667\",\r\n            \"pick_from_container_id\": \"10025700\",\r\n            \"dest_id\": \"111\",\r\n            \"item_id\": \"404010000\",\r\n            \"location_id\": \"10025700\",\r\n            \"check_digit\": \"2567\",\r\n            \"case_pack_size\": 6,\r\n            \"pick_container_qty\": 1,\r\n            \"unit_qty\": 6,\r\n            \"pick_order\": 8,\r\n            \"pick_type\": \"U\",\r\n            \"pallet_group_id\": 13136111,\r\n            \"work_directive_id\": 133087222,\r\n            \"task_id\": \"88701673\",\r\n            \"zone\": \"CAJA\",\r\n            \"wave_nbr\": 36\r\n        },\r\n        {\r\n            \"distro_nbr\": \"433793667\",\r\n            \"pick_from_container_id\": \"10033700\",\r\n            \"dest_id\": \"504\",\r\n            \"item_id\": \"404007000\",\r\n            \"location_id\": \"10033700\",\r\n            \"check_digit\": \"8652\",\r\n            \"case_pack_size\": 1,\r\n            \"pick_container_qty\": 1,\r\n            \"unit_qty\": 1,\r\n            \"pick_order\": 9,\r\n            \"pick_type\": \"U\",\r\n            \"pallet_group_id\": 13136111,\r\n            \"work_directive_id\": 133087229,\r\n            \"task_id\": \"88701671\",\r\n            \"zone\": \"CAJA\",\r\n            \"wave_nbr\": 36\r\n        },\r\n        {\r\n            \"distro_nbr\": \"433793667\",\r\n            \"pick_from_container_id\": \"10033700\",\r\n            \"dest_id\": \"583\",\r\n            \"item_id\": \"404007000\",\r\n            \"location_id\": \"10033700\",\r\n            \"check_digit\": \"8652\",\r\n            \"case_pack_size\": 1,\r\n            \"pick_container_qty\": 1,\r\n            \"unit_qty\": 1,\r\n            \"pick_order\": 10,\r\n            \"pick_type\": \"U\",\r\n            \"pallet_group_id\": 13136111,\r\n            \"work_directive_id\": 133087228,\r\n            \"task_id\": \"88701672\",\r\n            \"zone\": \"CAJA\",\r\n            \"wave_nbr\": 36\r\n        },\r\n        {\r\n            \"distro_nbr\": \"433793667\",\r\n            \"pick_from_container_id\": \"10033700\",\r\n            \"dest_id\": \"111\",\r\n            \"item_id\": \"404007000\",\r\n            \"location_id\": \"10033700\",\r\n            \"check_digit\": \"8652\",\r\n            \"case_pack_size\": 1,\r\n            \"pick_container_qty\": 1,\r\n            \"unit_qty\": 1,\r\n            \"pick_order\": 11,\r\n            \"pick_type\": \"U\",\r\n            \"pallet_group_id\": 13136111,\r\n            \"work_directive_id\": 133087226,\r\n            \"task_id\": \"88701673\",\r\n            \"zone\": \"CAJA\",\r\n            \"wave_nbr\": 36\r\n        },\r\n        {\r\n            \"distro_nbr\": \"433793667\",\r\n            \"pick_from_container_id\": \"10033700\",\r\n            \"dest_id\": \"161\",\r\n            \"item_id\": \"404007000\",\r\n            \"location_id\": \"10033700\",\r\n            \"check_digit\": \"8652\",\r\n            \"case_pack_size\": 1,\r\n            \"pick_container_qty\": 1,\r\n            \"unit_qty\": 1,\r\n            \"pick_order\": 12,\r\n            \"pick_type\": \"U\",\r\n            \"pallet_group_id\": 13136111,\r\n            \"work_directive_id\": 133087227,\r\n            \"task_id\": \"88701670\",\r\n            \"zone\": \"CAJA\",\r\n            \"wave_nbr\": 36\r\n        }\r\n    ],\r\n    \"statusCode\": \"200\",\r\n    \"message\": \"GET_TASK hecho con exito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://alecd002.tia.com.ec:9004/ords/wms/voicepicking/picking/unit",
+					"protocol": "https",
+					"host": [
+						"alecd002",
+						"tia",
+						"com",
+						"ec"
+					],
+					"port": "9004",
+					"path": [
+						"ords",
+						"wms",
+						"voicepicking",
+						"picking",
+						"unit"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
